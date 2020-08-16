@@ -1,0 +1,32 @@
+body {
+background-image: url("../html/wall.jpg");
+background-size: cover;
+}
+
+.navbar-text{
+  font-family: 'Dancing Script', cursive !important;
+  color: black !important;
+  font-size: 80px;
+  text-shadow: -1px 0 lightblue, 0 3px lightblue, 2px 0 pink, 0 -1px pink;
+}
+
+.navbar{
+  margin-top: -10px !important;
+  padding: 5px;
+  margin-bottom: 10px;
+  justify-content: center;
+  background-color: #e3f2fd !important;
+  opacity: 0.7;
+}
+
+.container{
+  display: flex;
+  justify-content: center;
+}
+.form-group {
+    border: 1px solid #545454 !important;
+    border-radius: 3px;
+    padding: 15px;
+    width: 50%;
+    background-color: white !important;
+}

@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+    <!--<link rel="stylesheet" href="../styles/styles.css">-->
+
+    <title>Travel Planner</title>
+  </head>
+  <body>
+    <div class="navbar navbar-dark bg-dark">
+      <h1 class="navbar-text" > Travel Planner</h1>
+    </div>
+  <form class="container">
+  <div class="form-group">
+    <label for="formGroupExampleInput">Destination </label>
+    <input type="text" class="form-control" id="Destination" placeholder="enter city name">
+    <label for="formGroupExampleInput2">Departure Date</label>
+    <input type="date" class="form-control" id="Departure">
+    <label for="formGroupExampleInput2">Return Date</label>
+    <input type="date" class="form-control" id="Return">
+    <br><input type="submit" name="" value="get trip" onclick="return Client.performAction(event)" onsubmit="return performAction(event)">
+  </div>
+</form>
+<section class="container">
+   <strong>Form Results:</strong>
+     <div id="theUrl"></div>
+ </section>
+
+  </body>
+</html>
