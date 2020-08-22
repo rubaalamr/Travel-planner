@@ -1,8 +1,6 @@
-const app = require('../src/server/index.js');
-const request = require('supertest');
+import { thePort } from "../server/index"
 
-  it("testing endopoint", async done => {
-    const res = await request.get('/all')
-    expect(res.status).toBe(200);
-    done();
+  test('listen', () => {
+    expect(thePort).toBeDefined();
+
 });

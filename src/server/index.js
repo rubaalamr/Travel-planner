@@ -18,9 +18,10 @@ app.use(bodyParser.urlencoded({
 app.use(express.static('dist'))
 
 // designates what port the app will listen to for incoming requests
-app.listen(5020, function () {
+app.listen(5020, thePort);
+  function thePort() {
     console.log('Example app listening on port 5020!')
-})
+};
 
 app.get('/', function (req, res) {
     res.sendFile('dist/index.html')
