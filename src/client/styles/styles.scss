@@ -30,3 +30,21 @@ background-size: cover;
     width: 50%;
     background-color: white !important;
 }
+
+//phone size
+
+@media (max-width: 769px){
+  .form-group {
+      border: 1px solid #545454 !important;
+      border-radius: 3px;
+      padding: 15px;
+      width: 100%;
+      background-color: white !important;
+  }
+  .navbar-text{
+    font-family: 'Dancing Script', cursive !important;
+    color: black !important;
+    font-size: 40px;
+    text-shadow: -1px 0 lightblue, 0 3px lightblue, 2px 0 pink, 0 -1px pink;
+  }
+}

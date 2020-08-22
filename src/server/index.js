@@ -18,36 +18,45 @@ app.use(bodyParser.urlencoded({
 app.use(express.static('dist'))
 
 // designates what port the app will listen to for incoming requests
-app.listen(1500, function () {
-    console.log('Example app listening on port 1500!')
+app.listen(5020, function () {
+    console.log('Example app listening on port 5020!')
 })
-/*
+
 app.get('/', function (req, res) {
     res.sendFile('dist/index.html')
 })
 
-app.post('/url', function (req, res){
-  textapi.sentiment({
-    url: req.body.text
-  }, function(error, response) {
-    if (error) {
-      return;
-    }
-    res.send(response)
-  });
-})
-*/
+
 //GET
 app.get('/all', (req, res) =>{
   res.send(projectData);
   //projectData = {};
 });
 
-// POST
+// POST APIs
 app.post('/geonames', (req, res) =>{
-  projectData.lat = req.body.lat,
-  projectData.lng = req.body.lng,
+  projectData.departure = req.body.departure;
+  projectData.returnDate = req.body.returnDate;
+  projectData.lat = req.body.lat;
+  projectData.lng = req.body.lng;
   projectData.countryName = req.body.countryName;
 
   res.send(projectData);
   });
+
+  app.post('/weather', (req, res) =>{
+    projectData.hight = req.body.hight;
+    projectData.low = req.body.low;
+    projectData.description = req.body.description;
+    projectData.icon = req.body.icon;
+
+    res.send(projectData);
+    });
+
+    app.post('/pix', (req, res) =>{
+      projectData.pic = req.body.pic;
+
+      res.send(projectData);
+      });
+
+      module.exports = app
